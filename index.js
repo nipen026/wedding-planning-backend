@@ -2,10 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 
 // Initialize Express
 const app = express();
-
+app.use(cors());
 // Middleware
 app.use(bodyParser.json());
 
@@ -81,7 +82,7 @@ app.post('/api/inquiries', async (req, res) => {
 });
 
 // Start the server
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8181;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
