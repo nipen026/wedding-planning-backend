@@ -47,6 +47,10 @@ const transporter = nodemailer.createTransport({
 });
 
 // Routes
+app.get('/api/get',async(req, res)=>{
+  res.status(200).send('Hello');
+})
+
 app.post('/api/inquiries', async (req, res) => {
   try {
     const inquiry = new Inquiry(req.body);
