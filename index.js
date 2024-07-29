@@ -49,7 +49,7 @@ const transporter = nodemailer.createTransport({
 
 // Routes
 app.get('/api/get',async(req, res)=>{
-  res.status(200).send('Hello');
+  res.status(200).send('Hello world');
 })
 
 app.post('/api/inquiries', async (req, res) => {
