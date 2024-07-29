@@ -29,6 +29,7 @@ const inquirySchema = new mongoose.Schema({
   email: String,
   contactNumber: String,
   address:String,
+  weddingDate:String,
   plan: {
     type: String,
     enum: ['Basic', 'Premium', 'Destination']
@@ -66,6 +67,7 @@ app.post('/api/inquiries', async (req, res) => {
              Email: ${inquiry.email}
              Contact Number: ${inquiry.contactNumber}
              Plan: ${inquiry.plan}
+             Wedding Date: ${inquiry.weddingDate}
              Address:${inquiry.address}`
              
     };
